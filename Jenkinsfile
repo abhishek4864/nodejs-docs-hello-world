@@ -6,16 +6,17 @@ pipeline{
 
          stage('build Application'){
             steps{
-                script{
-                    sh 'npm install'
-                }
+                cmd.exe 'npm install'
+                //script{
+                  //  cmd.exe 'npm install'
+               // }
             }
         }
         
         stage('testing'){         
             steps{
                    script{
-                      sh 'node test'
+                      cmd.exe 'node test'
             }
                 
             }
