@@ -7,26 +7,29 @@ pipeline{
          stage('build Application'){
             steps{
                // cmd.exe 'npm install'
-                script{
-                    cmd.exe 'npm install'
-                }
+                cmd_exec('"npm install"')
+                //script{
+                   // cmd.exe 'npm install'
+                //}
             }
         }
         
-        stage('testing'){         
+         stage('Test Application'){
             steps{
-                   script{
-                      cmd.exe 'node test'
-            }
-                
+               // cmd.exe 'npm install'
+                cmd_exec('"node test"')
+                //script{
+                   // cmd.exe 'npm install'
+                //}
             }
         }
-        stage('deploy'){
+         stage('Deploy Application'){
             steps{
-                   script{
-               // gv_script.testApp()
-               echo "Deploying Application..."
-            }
+               // cmd.exe 'npm install'
+                cmd_exec('echo "deploy apllication..."')
+                //script{
+                   // cmd.exe 'npm install'
+                //}
             }
         }
     }
