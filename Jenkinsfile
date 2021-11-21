@@ -7,7 +7,7 @@ pipeline{
          stage('build Application'){
             steps{
                 script{
-                    cmd 'npm install'
+                    cmd.exe 'npm install'
                 }
             }
         }
