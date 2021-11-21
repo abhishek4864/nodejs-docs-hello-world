@@ -16,9 +16,7 @@ pipeline{
         stage('testing'){         
             steps{
                 echo "Testing application"
-                bat """
-                   node test
-                    """
+
 
                 
             }
