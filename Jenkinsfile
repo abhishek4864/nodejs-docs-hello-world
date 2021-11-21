@@ -6,30 +6,31 @@ pipeline{
 
          stage('build Application'){
             steps{
-               // cmd.exe 'npm install'
-                cmd_exec('"npm install"')
-                //script{
-                   // cmd.exe 'npm install'
-                //}
+                echo "Building application"
+                bat """
+                    npm install
+                    """
             }
         }
         
-         stage('Test Application'){
+        stage('testing'){         
             steps{
-               // cmd.exe 'npm install'
-                cmd_exec('"node test"')
-                //script{
-                   // cmd.exe 'npm install'
-                //}
+                echo "Testing application"
+                bat """
+                   node test
+                    """
+
+                
             }
         }
-         stage('Deploy Application'){
+        stage('deploy'){
             steps{
-               // cmd.exe 'npm install'
-                cmd_exec('echo "deploy apllication..."')
-                //script{
-                   // cmd.exe 'npm install'
-                //}
+            steps{
+                echo "deploying application"
+ 
+
+                
+            }
             }
         }
     }
