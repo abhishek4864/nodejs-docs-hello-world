@@ -22,13 +22,13 @@ pipeline{
             }
         }
         stage('deploy'){
-            steps{
+         
             steps{
                 echo "deploying application"
  
 
                 
-            }
+            
             }
         }
     }
